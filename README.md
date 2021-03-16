@@ -20,11 +20,16 @@ APIKEY [OnlyDevCity](https://wa.me/6281285627596)
 
 First of all, you need to install [Git](https://git-scm.com/download/win) & [NodeJS](https://nodejs.org/). Then open your git bash, and follow this:<br>
 ```sh
-$ pkg install git
-$ git clone https://github.com/ItsmeikyXSec4O4/BotWhatsappODC/
+$ termux-setup-storage
+$ pkg install update && pkg install upgrade
+$ pkg install ffmpeg && pkg install bash && pkg install nodejs
+$ git clone https://github.com/ItsmeikyXSec4O4/BotWhatsappODC
 $ cd BotWhatsappODC
+$ ls
 $ bash install.sh
 $ node index.js
+
+Tinggal Scan Dah :)
 ```
 
 ## How to run
