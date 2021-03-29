@@ -236,7 +236,7 @@ runtime = process.uptime()
 ┣◪ 𝗜𝗡𝗙𝗢
 ┃ ❏ Runtime: ${kyun(runtime)}
 ┃ ❏ Prefix: 「 ${prefix} 」
-┃ ❏ Selfbot By OnlyDev City
+┃ ❏ Bot Whatsapp By OnlyDev City
 ┃ ❏ Api : https://onlydevcity.herokuapp.com/
 ┃
 ┣◪ 𝗔𝗦𝗨𝗣𝗔𝗡
