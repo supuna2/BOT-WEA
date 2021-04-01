@@ -364,56 +364,56 @@ runtime = process.uptime()
 ┣ ❏ ${prefix}nulis 
 ┣ ❏ ${prefix}hary
 ┣ ❏ ${prefix}fancy
-┣ ❏${prefix}april
-┣ ❏${prefix}winner
-┣ ❏${prefix}chrome
-┣ ❏${prefix}dance
-┣ ❏${prefix}funtime
-┣ ❏${prefix}google
-┣ ❏${prefix}hbd
-┣ ❏${prefix}minions
-┣ ❏${prefix}matrix
-┣ ❏${prefix}orlando
-┣ ❏${prefix}surfboard
-┣ ❏${prefix}wroom
-┣ ❏${prefix}text3d
-┣ ❏${prefix}water
-┣ ❏${prefix}blackbird
-┣ ❏${prefix}memories
-┣ ❏${prefix}flaming
-┣ ❏${prefix}dracula
-┣ ❏${prefix}star
-┣ ❏${prefix}shrek
-┣ ❏${prefix}zilch
-┣ ❏${prefix}prime
-┣ ❏${prefix}sport
-┣ ❏${prefix}sound                
-┣ ❏${prefix}usa
-┣ ❏${prefix}cereal
-┣ ❏${prefix}neon
-┣ ❏${prefix}fun
-┣ ❏${prefix}glow
-┣ ❏${prefix}sugar
-┣ ❏${prefix}warrior
-┣ ❏${prefix}fireworks
-┣ ❏${prefix}trance
-┣ ❏${prefix}sunshine
-┣ ❏${prefix}express
-┣ ❏${prefix}casino
-┣ ❏${prefix}army
-┣ ❏${prefix}diary
-┣ ❏${prefix}booking
-┣ ❏${prefix}husky
-┣ ❏${prefix}slime
-┣ ❏${prefix}hockey
-┣ ❏${prefix}vampire
-┣ ❏${prefix}toothpaste
-┣ ❏${prefix}spider
-┣ ❏${prefix}hbd2
-┣ ❏${prefix}halloween
-┣ ❏${prefix}alien
-┣ ❏${prefix}sound
-┣ ❏${prefix}smurf
+┣ ❏ ${prefix}april
+┣ ❏ ${prefix}winner
+┣ ❏ ${prefix}chrome
+┣ ❏ ${prefix}dance
+┣ ❏ ${prefix}funtime
+┣ ❏ ${prefix}google
+┣ ❏ ${prefix}hbd
+┣ ❏ ${prefix}minions
+┣ ❏ ${prefix}matrix
+┣ ❏ ${prefix}orlando
+┣ ❏ ${prefix}surfboard
+┣ ❏ ${prefix}wroom
+┣ ❏ ${prefix}text3d
+┣ ❏ ${prefix}water
+┣ ❏ ${prefix}blackbird
+┣ ❏ ${prefix}memories
+┣ ❏ ${prefix}flaming
+┣ ❏ ${prefix}dracula
+┣ ❏ ${prefix}star
+┣ ❏ ${prefix}shrek
+┣ ❏ ${prefix}zilch
+┣ ❏ ${prefix}prime
+┣ ❏ ${prefix}sport
+┣ ❏ ${prefix}sound                
+┣ ❏ ${prefix}usa
+┣ ❏ ${prefix}cereal
+┣ ❏ ${prefix}neon
+┣ ❏ ${prefix}fun
+┣ ❏ ${prefix}glow
+┣ ❏ ${prefix}sugar
+┣ ❏ ${prefix}warrior
+┣ ❏ ${prefix}fireworks
+┣ ❏ ${prefix}trance
+┣ ❏ ${prefix}sunshine
+┣ ❏ ${prefix}express
+┣ ❏ ${prefix}casino
+┣ ❏ ${prefix}army
+┣ ❏ ${prefix}diary
+┣ ❏ ${prefix}booking
+┣ ❏ ${prefix}husky
+┣ ❏ ${prefix}slime
+┣ ❏ ${prefix}hockey
+┣ ❏ ${prefix}vampire
+┣ ❏ ${prefix}toothpaste
+┣ ❏ ${prefix}spider
+┣ ❏ ${prefix}hbd2
+┣ ❏ ${prefix}halloween
+┣ ❏ ${prefix}alien
+┣ ❏ ${prefix}sound
+┣ ❏ ${prefix}smurf
 ┃
 ┣ ◪ 𝗠𝗘𝗡𝗨 𝗢𝗧𝗛𝗘𝗥
 ┃
