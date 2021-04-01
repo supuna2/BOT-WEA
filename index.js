@@ -362,6 +362,58 @@ runtime = process.uptime()
 ┣ ❏ ${prefix}wolf 
 ┣ ❏ ${prefix}candy 
 ┣ ❏ ${prefix}nulis 
+┣ ❏ ${prefix}hary
+┣ ❏ ${prefix}fancy
+┣ ❏${prefix}april
+┣ ❏${prefix}winner
+┣ ❏${prefix}chrome
+┣ ❏${prefix}dance
+┣ ❏${prefix}funtime
+┣ ❏${prefix}google
+┣ ❏${prefix}hbd
+┣ ❏${prefix}minions
+┣ ❏${prefix}matrix
+┣ ❏${prefix}orlando
+┣ ❏${prefix}surfboard
+┣ ❏${prefix}wroom
+┣ ❏${prefix}text3d
+┣ ❏${prefix}water
+┣ ❏${prefix}blackbird
+┣ ❏${prefix}memories
+┣ ❏${prefix}flaming
+┣ ❏${prefix}dracula
+┣ ❏${prefix}star
+┣ ❏${prefix}shrek
+┣ ❏${prefix}zilch
+┣ ❏${prefix}prime
+┣ ❏${prefix}sport
+┣ ❏${prefix}sound                
+┣ ❏${prefix}usa
+┣ ❏${prefix}cereal
+┣ ❏${prefix}neon
+┣ ❏${prefix}fun
+┣ ❏${prefix}glow
+┣ ❏${prefix}sugar
+┣ ❏${prefix}warrior
+┣ ❏${prefix}fireworks
+┣ ❏${prefix}trance
+┣ ❏${prefix}sunshine
+┣ ❏${prefix}express
+┣ ❏${prefix}casino
+┣ ❏${prefix}army
+┣ ❏${prefix}diary
+┣ ❏${prefix}booking
+┣ ❏${prefix}husky
+┣ ❏${prefix}slime
+┣ ❏${prefix}hockey
+┣ ❏${prefix}vampire
+┣ ❏${prefix}toothpaste
+┣ ❏${prefix}spider
+┣ ❏${prefix}hbd2
+┣ ❏${prefix}halloween
+┣ ❏${prefix}alien
+┣ ❏${prefix}sound
+┣ ❏${prefix}smurf
 ┃
 ┣ ◪ 𝗠𝗘𝗡𝗨 𝗢𝗧𝗛𝗘𝗥
 ┃
@@ -2360,6 +2412,66 @@ runtime = process.uptime()
 						reply(ind.satukos())
 					}
 					break
+case 'hary':
+                case 'fancy':
+                case 'april':
+                case 'winner':
+                case 'chrome':
+                case 'dance':
+                case 'funtime':
+                case 'google':
+                case 'hbd':
+                case 'minions':
+                case 'matrix':
+                case 'orlando':
+                case 'surfboard':
+                case 'wroom':
+                case 'text3d':
+                case 'water':
+                case 'blackbird':
+                case 'memories':
+                case 'flaming':
+                case 'dracula':
+                case 'star':
+                case 'shrek':
+                case 'zilch':
+                case 'prime':
+                case 'sport':
+                case 'sound':                
+                case 'usa':
+                case 'cereal':
+                case 'neon':
+                case 'fun':
+                case 'glow':
+                case 'sugar':
+                case 'warrior':
+                case 'fireworks':
+                case 'trance':
+                case 'sunshine':
+                case 'express':
+                case 'casino':
+                case 'army':
+                case 'diary':
+                case 'booking':
+                case 'husky':
+                case 'slime':
+                case 'hockey':
+                case 'vampire':
+                case 'toothpaste':
+                case 'spider':
+                case 'hbd2':
+                case 'halloween':
+                case 'alien':
+                case 'sound':
+                case 'smurf':
+                    if (!isUser) return reply(mess.only.userB)
+                    if (isBanned) return reply('Lu dah dibanned makanya jan spam')
+                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nExample: ${prefix + command} Shizuka`)
+                    itu_txt = args.join(" ")
+                    res = await fetchJson(`https://onlydevcity.herokuapp.com/api/flamingtext/${command}?text=${itu_txt}&apikey=YOUR_APIKEY`)
+					buffer = await getBuffer(res.result)
+                  onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
+				break
                             }
 		} catch (e) {
 			console.log('Error : %s', color(e, 'red'))
