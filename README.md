@@ -8,7 +8,7 @@
 
 - 👀 I m currently focusing on **JavaScript**.
 
-- 📝 I m currently working on [`ShozukaAPIs`](https://api.shizukaa.xyz/) 
+- 📝 I m currently working on [`Only Dev City`](https://onlydevcity.herokuapp.com/) 
 
 ## Requirement
 
@@ -23,8 +23,8 @@ First of all, you need to install [Git](https://git-scm.com/download/win) & [Nod
 $ termux-setup-storage
 $ pkg install update && pkg install upgrade
 $ pkg install ffmpeg && pkg install bash && pkg install nodejs
-$ git clone https://github.com/ItsmeikyXSec4O4/BotWhatsappODC
-$ cd BotWhatsappODC
+$ git clone https://github.com/ItsmeikyXSec4O4/BOT-WEA
+$ cd BOT-WEA
 $ ls
 $ bash install.sh
 $ node index.js
