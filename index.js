@@ -16,6 +16,12 @@
 
 //======[ TQTQ JANGAN DI HAPUS YA KONTOL]=======\\
 //======[  NUMPANG NAMA DOANG LU ANJING ]=======\\
+
+/*
+* Mau Work Semua? Beli Api Key Nya Di
+* https://onlydevcity.herokuapp.com/
+*/
+
 const {
     WAConnection,
     MessageType,
