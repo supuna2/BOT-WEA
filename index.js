@@ -1,13 +1,20 @@
-//SC BY MHANKBARBAR
-//RECODE BY ITSMEIKYXSEC404 & RIZKYO
-//WEB API BY ITSMEIKYXSEC404
-//INFODEVELOPER JANGAN DI HAPUS AJG
-//NUMPANG NAMA DOANG LU AJG
-//APIKEY ? BELI SENDIRI YA :P
-//EDT APIKEY ? DI /src/settings.json
-//EDT OWNER NUMBER ? DI /src/settings.json
-//EDT PREFIX BOT ? DI /src/settings.json
-// BELI DI WEB : https://onlydevcity.herokuapp.com/price
+//======[ SCRIPT BY ITSMEIKY FT RIZKYO ]=======\\
+    //======[ MY TEAM ONLY DEV CITY]=======\\
+/*
+* Thanks To :
+* DuingZ
+* Argay
+* Bryan Gay
+* Fadhill Gay
+* Ramlan Gay
+* Akmal Gay
+* Bagas Gay
+* Nayla Gay
+* All Creator Bot Wea
+*/
+
+//======[ TQTQ JANGAN DI HAPUS YA KONTOL]=======\\
+//======[  NUMPANG NAMA DOANG LU ANJING ]=======\\
 const {
     WAConnection,
     MessageType,
