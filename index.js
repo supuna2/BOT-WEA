@@ -2499,11 +2499,9 @@ runtime = process.uptime()
                 case 'alien':
                 case 'sound':
                 case 'smurf':
-                    if (!isUser) return reply(mess.only.userB)
-                    if (isBanned) return reply('Lu dah dibanned makanya jan spam')
                     if (args.length == 0) return reply(`Usage: ${prefix + command} text\nExample: ${prefix + command} Shizuka`)
                     itu_txt = args.join(" ")
-                    res = await fetchJson(`https://onlydevcity.herokuapp.com/api/flamingtext/${command}?text=${itu_txt}&apikey=YOUR_APIKEY`)
+                    res = await fetchJson(`https://onlydevcity.herokuapp.com/api/flamingtext/${command}?text=${itu_txt}&apikey=${PremiumKey}`)
 					buffer = await getBuffer(res.result)
                   onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
