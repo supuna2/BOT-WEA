@@ -1,22 +1,8 @@
-//======[ SCRIPT BY ITSMEIKY FT RIZKYO ]=======\\
-    //======[ MY TEAM ONLY DEV CITY]=======\\
-
-/*
-* Thanks To :
-* DuingZ
-* Argay
-* Bryan Gay
-* Fadhill Gay
-* Ramlan Gay
-* Akmal Gay
-* Bagas Gay
-* Nayla Gay
-* All Creator Bot Wea
+ /*
+* Terserah kamu aja mau di tulis nama gw atau 
+* engga juga intinya nih sc buat kamu hehe :v
 */
-
-//======[ TQTQ JANGAN DI HAPUS YA KONTOL]=======\\
-//======[  NUMPANG NAMA DOANG LU ANJING ]=======\\
-
+//======[ Rizky Maulana Sidik ]=======\\
 /*
 * Mau Work Semua? Beli Api Key Nya Di
 * https://onlydevcity.herokuapp.com/
@@ -85,12 +71,77 @@ async function starts() {
 	await onlydev.connect({timeoutMs: 30*1000})
         fs.writeFileSync('./self-bot.json', JSON.stringify(onlydev.base64EncodedAuthInfo(), null, '\t'))
 
+	onlydev.on('group-participants-update', async (anu) => {
+		try {
+			console.log(anu)
+			if (anu.action == 'add') {
+				const mdata = await onlydev.groupMetadata(anu.jid)
+				num = anu.participants[0]
+				global.txtwl
+				txtwl = `*Hai* *@${num.split('@')[0]}*\n*◪* *Welcome in group:*\n*├─* *${mdata.subject}*\n*│*\n*├─* *Intro dulu*\n*├─ ❏* *Nama:* \n*├─ ❏* *Umur:* \n*├─ ❏* *Asal kota:* \n*├─ ❏* *Kelas:* \n*├─ ❏* *Jenis kelamin:* \n*└─ ❏* *Nomor:* ${num.replace('@s.whatsapp.net', '')}\n*Semoga Betah yaa~~*\n${mdata.desc}`
+				try {
+					ppimg = await onlydev.getProfilePicture(`${anu.participants[0].split('@')[0]}@c.us`)
+				} catch {
+					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+				}
+				teks = `${txtwl}`
+				let buff = await getBuffer(ppimg)
+				onlydev.sendMessage(mdata.id, buff, MessageType.image, {contextInfo: {mentionedJid: [num]}, caption: txtwl, quoted: { "key": { "participant": `${numbernye}`, "remoteJid": `${setgrup}`, "fromMe": false, "id": "B391837A58338BA8186C47E51FFDFD4A" }, "message": { "documentMessage": { "jpegThumbnail": buff, "mimetype": "application/octet-stream", "title": `*Welcome*`, "fileLength": "36", "pageCount": 0, "fileName": `_*Welcome*_` }}, "messageTimestamp": "1614069378", "status": "PENDING"}})
+				} else if (anu.action == 'remove') {
+					const mdata = await onlydev.groupMetadata(anu.jid)
+				num = anu.participants[0]
+				try {
+					ppimg = await onlydev.getProfilePicture(`${num.split('@')[0]}@c.us`)
+				} catch {
+					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+				}
+				teks = `*◪* *Goodbye* *@${num.split('@')[0]}*\n*◪* *Leave from group:*\n*${mdata.subject}*\n*│*\n*└─ ❏* *Nomor:* ${num.replace('@s.whatsapp.net', '')}\n*GoodBye~~*`
+				let buff = await getBuffer(ppimg)
+				onlydev.sendMessage(mdata.id, buff, MessageType.image, {contextInfo: {mentionedJid: [num]}, caption: teks})
+		} else if (anu.action == 'promote') {
+			const mdata = await onlydev.groupMetadata(anu.jid)
+			num = anu.participants[0]
+			try {
+					ppimg = await onlydev.getProfilePicture(`${anu.participants[0].split('@')[0]}@c.us`)
+				} catch {
+					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+				}
+			let buff = await getBuffer(ppimg)
+			teks = `*◪* *PROMOTE DETECT*\n*├─* *Nomor:* ${num.replace('@s.whatsapp.net', '')}\n*├─* *Quote:* Selamat anda telah menjadi admin group !\n*└─ ❏* *@${num.split('@')[0]}*`
+			onlydev.sendMessage(mdata.id, teks, MessageType.text, {contextInfo: {mentionedJid: [num]}, quoted: { "key": { "participant": `${numbernye}`, "remoteJid": `${setgrup}`, "fromMe": false, "id": "B391837A58338BA8186C47E51FFDFD4A" }, "message": { "documentMessage": { "jpegThumbnail": buff, "mimetype": "application/octet-stream", "title": `*PROMOTE*`, "fileLength": "36", "pageCount": 0, "fileName": `_*Welcome*_` }}, "messageTimestamp": "1614069378", "status": "PENDING"}})
+		} else if (anu.action == 'demote') {
+			num = anu.participants[0]
+			const mdata = await onlydev.groupMetadata(anu.jid)
+			try {
+					ppimg = await onlydev.getProfilePicture(`${anu.participants[0].split('@')[0]}@c.us`)
+				} catch {
+					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+				}
+			let buff = await getBuffer(ppimg)
+			teks = `*◪* *DEMOTE DETECT*\n*├─* *Nomor:* ${num.replace('@s.whatsapp.net', '')}\n*└─ ❏* *@${num.split('@')[0]}*`
+			onlydev.sendMessage(mdata.id, teks, MessageType.text, {contextInfo: {mentionedJid: [num]}, quoted: { "key": { "participant": `${numbernye}`, "remoteJid": `${setgrup}`, "fromMe": false, "id": "B391837A58338BA8186C47E51FFDFD4A" }, "message": { "documentMessage": { "jpegThumbnail": buff, "mimetype": "application/octet-stream", "title": `*DEMOTE*`, "fileLength": "36", "pageCount": 0, "fileName": `_*Welcome*_` }}, "messageTimestamp": "1614069378", "status": "PENDING"}})
+		}
+		} catch (e) {
+			console.log('Error : %s', color(e, 'red'))
+		}
+})
 	onlydev.on('CB:Blocklist', json => {
-            if (blocked.length > 2) return
+		if (blocked.length > 2) return
 	    for (let i of json[1].blocklist) {
 	    	blocked.push(i.replace('c.us','s.whatsapp.net'))
 	    }
 	})
+
+onlydev.on("CB:Call", json => {
+		let call;
+		calling = JSON.parse(JSON.stringify(json))
+		call = calling[1].from
+		setTimeout(function(){
+			onlydev.sendMessage(call, `Maaf, onlydev tidak bisa menerima panggilan. nelfon = block!.\nJika ingin membuka block harap chat Owner!`, MessageType.text)
+			.then(() => onlydev.blockUser(call, "add"))
+			}, 100);
+		}
+	)
 
 	onlydev.on('chat-update', async (odc) => {
 		try {
@@ -107,7 +158,7 @@ async function starts() {
 			const { text, extendedText, contact, location, liveLocation, image, video, sticker, document, audio, product } = MessageType
 			const time = moment.tz('Asia/Jakarta').format('DD/MM HH:mm:ss')
 			body = (type === 'conversation' && odc.message.conversation.startsWith(prefix)) ? odc.message.conversation : (type == 'imageMessage') && odc.message.imageMessage.caption.startsWith(prefix) ? odc.message.imageMessage.caption : (type == 'videoMessage') && odc.message.videoMessage.caption.startsWith(prefix) ? odc.message.videoMessage.caption : (type == 'extendedTextMessage') && odc.message.extendedTextMessage.text.startsWith(prefix) ? odc.message.extendedTextMessage.text : ''
-                        var pes = (type === 'conversation' && odc.message.conversation) ? odc.message.conversation : (type == 'imageMessage') && odc.message.imageMessage.caption ? odc.message.imageMessage.caption : (type == 'videoMessage') && odc.message.videoMessage.caption ? odc.message.videoMessage.caption : (type == 'extendedTextMessage') && odc.message.extendedTextMessage.text ? odc.message.extendedTextMessage.text : ''
+            var pes = (type === 'conversation' && odc.message.conversation) ? odc.message.conversation : (type == 'imageMessage') && odc.message.imageMessage.caption ? odc.message.imageMessage.caption : (type == 'videoMessage') && odc.message.videoMessage.caption ? odc.message.videoMessage.caption : (type == 'extendedTextMessage') && odc.message.extendedTextMessage.text ? odc.message.extendedTextMessage.text : ''
 			const messagesC = pes.slice(0).trim().split(/ +/).shift().toLowerCase()
 			budy = (type === 'conversation') ? odc.message.conversation : (type === 'extendedTextMessage') ? odc.message.extendedTextMessage.text : ''
 			const command = body.slice(1).trim().split(/ +/).shift().toLowerCase()
@@ -240,6 +291,37 @@ onlydev.sendMessage(from, `Sama Sama Kak 🙂`, audio, { quoted :  freply })
 			reply("Byee sontol :v")
 		}, 0)
 	}
+	
+	var ase = new Date();
+                        var waktoo = ase.getHours();
+                        switch(waktoo){
+                case 0: waktoo = "Waktu Tengah Malam🌚 - Tidur Kak :)"; break;
+                case 1: waktoo = "Waktu Tengah Malam🌚 - Tidur Kak :)"; break;
+                case 2: waktoo = "Waktu Dini Hari🌒 - Tidur Kak :)"; break;
+                case 3: waktoo = "Waktu Dini Hari🌓 - Tidur Kak :)"; break;
+                case 4: waktoo = "Subuh🌔"; break;
+                case 5: waktoo = "Subuh🌔"; break;
+                case 6: waktoo = "Selamat Pagi kak🌝🌝"; break;
+                case 7: waktoo = "Selamat Pagi kak🌝🌝"; break;
+                case 8: waktoo = "Selamat Pagi kak🌝🌝"; break;
+                case 9: waktoo = "Selamat Pagi kak🌝 kak🌝"; break;
+                case 10: waktoo = "Selamat Pagi kak🌝"; break;
+                case 11: waktoo = "Selamat Siang Kak🌞\n - Jangan Lupa Shalat Dzuhur"; break;
+                case 12: waktoo = "Selamat Siang Kak🌞\n - Jangan Lupa Shalat Dzuhur"; break;
+                case 13: waktoo = "Selamat Siang Kak🌞\n - Jangan Lupa Shalat Dzuhur"; break;
+                case 14: waktoo = "Selamat Siang Kak🌞\n - Jangan Lupa Beristirahat :)"; break;
+                case 15: waktoo = "Selamat Sore Kak🌝\n -  Jangan Lupa Mandi Dan shalat ashar"; break;
+                case 16: waktoo = "Selamat Sore Kak🌝\n  - Jangan Lupa Mandi Dan shalat ashar"; break;
+                case 17: waktoo = "Selamat Sore Kak🌖\n - Menjelang Malam🌚"; break;
+                case 18: waktoo = "Waktu Magrib🌘\n - Jangan Lupa Shalat Magrib Kak"; break;
+                case 19: waktoo = "Waktu Magrib🌚"; break;
+                case 20: waktoo = "Selamat Malam🌚"; break;
+                case 21: waktoo = "Selamat Malam🌚"; break;
+                case 22: waktoo = "Selamat Malam🌚\n - Jangan Lupa Beristirahat & Jangan Gadang"; break;
+                case 23: waktoo = "Tengah Malam🌚 \n - Tidur Kak, Ga baik bergadang :)"; break;
+            }
+            var tampilHari = "" + waktoo;
+            
 			switch(command) {
 				case 'help':
 				case 'menu':
@@ -253,6 +335,11 @@ runtime = process.uptime()
 ┃ ❏ Bot Whatsapp By OnlyDev City
 ┃ ❏ Api : https://onlydevcity.herokuapp.com/
 ┃
+┣━━━━━━━━━━━━━━━━━━
+┃ ❏ ${time}
+┃ ❏ ${tampilhari}
+┣━━━━━━━━━━━━━━━━━━
+┃ 
 ┣◪ 𝗔𝗦𝗨𝗣𝗔𝗡
 ┃
 ┣ ❏ ${prefix}asupan
@@ -286,23 +373,6 @@ runtime = process.uptime()
 ┃
 ┣◪ 𝗦𝗘𝗥𝗧𝗜 𝗠𝗔𝗞𝗘𝗥
 ┃
-┣ ❏ ${prefix}anakharam 
-┣ ❏ ${prefix}babu 
-┣ ❏ ${prefix}bucinserti 
-┣ ❏ ${prefix}bocilepep 
-┣ ❏ ${prefix}gayserti 
-┣ ❏ ${prefix}pacar 
-┣ ❏ ${prefix}sadboy 
-┣ ❏ ${prefix}surga 
-┣ ❏ ${prefix}pintar 
-┣ ❏ ${prefix}badboy 
-┣ ❏ ${prefix}badgirl 
-┣ ❏ ${prefix}goodboy 
-┣ ❏ ${prefix}goodgirl 
-┣ ❏ ${prefix}editorberkelas 
-┣ ❏ ${prefix}goodlooking 
-┣ ❏ ${prefix}fucekboy 
-┣ ❏ ${prefix}jamet 
 ┣ ❏ ${prefix}heker 
 ┣ ❏ ${prefix}fftourserti 
 ┣ ❏ ${prefix}fftourserti2 
@@ -437,6 +507,9 @@ runtime = process.uptime()
 ┃
 ┣ ◪ 𝗠𝗘𝗡𝗨 𝗢𝗧𝗛𝗘𝗥
 ┃
+┣ ❏ ${prefix}hurufkapital
+┣ ❏ ${prefix}hitungangka
+┣ ❏ ${prefix}ttp
 ┣ ❏ ${prefix}galaxy
 ┣ ❏ ${prefix}hacker
 ┣ ❏ ${prefix}interstellar
@@ -1725,6 +1798,25 @@ runtime = process.uptime()
 				hasil = `➸ *Author* : ${anu.result.author}\n*➸ Text EN :* ${anu.result.text_en}\n*➸ Text ID :* ${anu.result.text_id}`
 				onlydev.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
+		case 'hurufkapital': // Update By RzkyO & ItsmeikyXSec404
+				reply(`[❕] Loading`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/kapital?teks=${body.slice(13)}&apikey=${PremiumKey}`)
+				hasil = `➸ *Hasil* : ${anu.result}`
+				onlydev.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }})
+				break
+		case 'hitungangka': // Update By RzkyO & ItsmeikyXSec404
+				reply(`[❕] Loading`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/hitungangka?angka=${body.slice(12)}&apikey=${PremiumKey}`)
+				hasil = `➸ *Hasil* : ${anu.result.data}`
+				onlydev.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }})
+				break
+			case 'ttp':
+			    reply(`[❕] Loading`)
+				var bby = body.slice(4)
+				atetepe = await getBuffer(`https://onlydevcity.herokuapp.com/api/maker/ttp?q=${bby}&apikey=${PremiumKey}`)
+				hasil = await getBuffer(anu.result)
+			    onlydev.sendMessage(from, hasil, sticker, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }})
+			break
 		case 'gabut': // Update By RzkyO & ItsmeikyXSec404
 				reply(`[❕] Loading`)
 				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/gabut?apikey=${PremiumKey}`)
@@ -2598,12 +2690,3 @@ runtime = process.uptime()
 	})
 }
 starts()
-//SC BY MHANKBARBAR
-//WEB API BY ITSMEIKYXSEC404
-//RECODE BY ITSMEIKYXSEC404 & RIZKYO
-//CUMAN RECODE BANG
-//APIKEY ? BELI SENDIRI YA :P
-//EDT APIKEY ? DI /src/settings.json
-//EDT OWNER NUMBER ? DI /src/settings.json
-//EDT PREFIX BOT ? DI /src/settings.json
-// BELI DI WEB : https://onlydevcity.herokuapp.com/price
